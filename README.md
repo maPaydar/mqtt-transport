@@ -13,7 +13,7 @@ package main
 import (
 	"log"
 
-	"github.com/maPaydar/mqtt-transport/pkg/network/mqtt"
+	mqtt "github.com/maPaydar/mqtt-transport"
 )
 
 type MQTTHandlerImpl struct {
@@ -40,7 +40,7 @@ func (m MQTTHandlerImpl) OnPublish(packet *mqtt.Publish) error {
 }
 
 func main() {
-	svc, err := NewService("localhost:9090", &MQTTHandlerImpl{})
+	svc, err := mqtt.NewService("localhost:9090", &MQTTHandlerImpl{})
 	if err != nil {
 		log.Fatal(err)
 	}
