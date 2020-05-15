@@ -1,10 +1,10 @@
 # MQTT transport layer implementation
 
+This repo doesn't implement a message broker, just network layer of MQTT protocol.
+
 Inspired by [emmiter-io](https://github.com/emitter-io/emitter) project.
 
 MQTT protocol [reference](https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html).
-
-This repo doesn't implement a message broker, just network layer of MQTT protocol.
 
 ## Run Server
 ```go
